@@ -218,19 +218,20 @@ img {
   display: flex;
   align-items: center;
   transition: var(--transition-normal);
-  background-color: rgba(10, 17, 33, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .header.scrolled {
   height: 70px;
-  background-color: rgba(10, 17, 33, 0.85);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .header.scrolled .logo-text {
-  color: var(--color-text-light);
+  color: var(--color-primary);
 }
 
 .header.scrolled .logo-icon {
@@ -299,11 +300,11 @@ img {
 .nav-link {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-text-light-muted);
+  color: var(--color-text-muted);
 }
 
 .nav-link:hover {
-  color: var(--color-text-light);
+  color: var(--color-primary);
 }
 
 .nav-portal-link {
@@ -312,7 +313,7 @@ img {
 }
 
 .nav-portal-link:hover {
-  color: var(--color-text-light) !important;
+  color: var(--color-primary) !important;
 }
 
 .nav-cta {
@@ -329,7 +330,7 @@ img {
 
 .phone-quick span {
   font-size: 0.75rem;
-  color: var(--color-text-light-muted);
+  color: var(--color-text-muted);
 }
 
 .phone-quick a {
@@ -358,7 +359,7 @@ img {
 }
 
 .header.scrolled .hamburger span {
-  background-color: var(--color-text-light);
+  background-color: var(--color-primary);
 }
 
 /* Hero Carousel Section */
@@ -1532,10 +1533,11 @@ img {
 
 @media (max-width: 768px) {
   .header {
-    background-color: var(--color-primary);
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
   }
   .header .nav-link {
-    color: var(--color-text-light-muted);
+    color: var(--color-text-muted);
   }
   .hamburger {
     display: block;
@@ -1545,11 +1547,11 @@ img {
     top: 80px;
     left: 0;
     right: 0;
-    background-color: var(--color-primary-dark);
+    background-color: var(--bg-white);
     flex-direction: column;
     padding: 40px 24px;
     gap: 24px;
-    border-bottom: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-light);
     transform: translateY(-150%);
     opacity: 0;
     visibility: hidden;
