@@ -102,15 +102,55 @@ document.addEventListener('DOMContentLoaded', () => {
   let deviceCount = 5;
 
   const updateRecommendation = () => {
-    let recommendedSpeed = '300 Mega';
-    let rawSpeed = '300M';
+    let recommendedSpeed = '200 Mega';
+    let rawSpeed = '200M';
     let recommendedPrice = '79,90';
 
     if (selectedActivity === 'casual') {
-      if (deviceCount <= 6) {
-        recommendedSpeed = '300 Mega';
-        rawSpeed = '300M';
+      if (deviceCount <= 5) {
+        recommendedSpeed = '200 Mega';
+        rawSpeed = '200M';
         recommendedPrice = '79,90';
+      } else if (deviceCount <= 12) {
+        recommendedSpeed = '400 Mega';
+        rawSpeed = '400M';
+        recommendedPrice = '89,99';
+      } else if (deviceCount <= 20) {
+        recommendedSpeed = '600 Mega';
+        rawSpeed = '600M';
+        recommendedPrice = '99,90';
+      } else {
+        recommendedSpeed = '1 Giga';
+        rawSpeed = '1G';
+        recommendedPrice = '129,90';
+      }
+    } else if (selectedActivity === 'streaming') {
+      if (deviceCount <= 4) {
+        recommendedSpeed = '200 Mega';
+        rawSpeed = '200M';
+        recommendedPrice = '79,90';
+      } else if (deviceCount <= 10) {
+        recommendedSpeed = '400 Mega';
+        rawSpeed = '400M';
+        recommendedPrice = '89,99';
+      } else if (deviceCount <= 18) {
+        recommendedSpeed = '600 Mega';
+        rawSpeed = '600M';
+        recommendedPrice = '99,90';
+      } else {
+        recommendedSpeed = '1 Giga';
+        rawSpeed = '1G';
+        recommendedPrice = '129,90';
+      }
+    } else if (selectedActivity === 'gaming') {
+      if (deviceCount <= 3) {
+        recommendedSpeed = '200 Mega';
+        rawSpeed = '200M';
+        recommendedPrice = '79,90';
+      } else if (deviceCount <= 8) {
+        recommendedSpeed = '400 Mega';
+        rawSpeed = '400M';
+        recommendedPrice = '89,99';
       } else if (deviceCount <= 15) {
         recommendedSpeed = '600 Mega';
         rawSpeed = '600M';
@@ -118,35 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         recommendedSpeed = '1 Giga';
         rawSpeed = '1G';
-        recommendedPrice = '149,90';
-      }
-    } else if (selectedActivity === 'streaming') {
-      if (deviceCount <= 4) {
-        recommendedSpeed = '300 Mega';
-        rawSpeed = '300M';
-        recommendedPrice = '79,90';
-      } else if (deviceCount <= 12) {
-        recommendedSpeed = '600 Mega';
-        rawSpeed = '600M';
-        recommendedPrice = '99,90';
-      } else {
-        recommendedSpeed = '1 Giga';
-        rawSpeed = '1G';
-        recommendedPrice = '149,90';
-      }
-    } else if (selectedActivity === 'gaming') {
-      if (deviceCount <= 3) {
-        recommendedSpeed = '300 Mega';
-        rawSpeed = '300M';
-        recommendedPrice = '79,90';
-      } else if (deviceCount <= 8) {
-        recommendedSpeed = '600 Mega';
-        rawSpeed = '600M';
-        recommendedPrice = '99,90';
-      } else {
-        recommendedSpeed = '1 Giga';
-        rawSpeed = '1G';
-        recommendedPrice = '149,90';
+        recommendedPrice = '129,90';
       }
     }
 

@@ -218,22 +218,15 @@ img {
   display: flex;
   align-items: center;
   transition: var(--transition-normal);
+  background-color: rgba(10, 17, 33, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .header.scrolled {
   height: 70px;
   background-color: rgba(10, 17, 33, 0.85);
-  backdrop-filter: blur(12px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid var(--border-dark);
-}
-
-.header.scrolled .nav-link {
-  color: var(--color-text-light-muted);
-}
-
-.header.scrolled .nav-link:hover {
-  color: var(--color-text-light);
 }
 
 .header.scrolled .logo-text {
@@ -255,6 +248,19 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: height var(--transition-normal);
+  border-radius: var(--border-radius-sm);
+}
+
+.header.scrolled .logo-img {
+  height: 40px;
 }
 
 .logo-icon {
@@ -287,17 +293,26 @@ img {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-link {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-text-dark);
+  color: var(--color-text-light-muted);
 }
 
 .nav-link:hover {
-  color: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+.nav-portal-link {
+  color: var(--color-accent) !important;
+  font-weight: 600;
+}
+
+.nav-portal-link:hover {
+  color: var(--color-text-light) !important;
 }
 
 .nav-cta {
@@ -314,7 +329,7 @@ img {
 
 .phone-quick span {
   font-size: 0.75rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-light-muted);
 }
 
 .phone-quick a {
@@ -516,15 +531,15 @@ img {
 
 .plans-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   align-items: stretch;
 }
 
 .plan-card {
   background-color: var(--bg-white);
   border-radius: var(--border-radius-lg);
-  padding: 48px 40px;
+  padding: 40px 24px;
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -1001,6 +1016,150 @@ img {
   pointer-events: none;
 }
 
+/* Telefonia & PABX Section */
+.telephony-section {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.telephony-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.telephony-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.telephony-info h2 {
+  font-size: 2.5rem;
+}
+
+.telephony-info h2 span {
+  color: var(--color-accent);
+}
+
+.telephony-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.telephony-benefit-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-light);
+  transition: var(--transition-normal);
+}
+
+.telephony-benefit-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+
+.telephony-benefit-card .tel-icon {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.telephony-benefit-card .tel-text h4 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.telephony-benefit-card .tel-text p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.telephony-cta-card-box {
+  position: relative;
+  z-index: 5;
+}
+
+.telephony-cta-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.telephony-cta-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.telephony-cta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-cyan) 100%);
+}
+
+.telephony-cta-card .card-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--border-radius-pill);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.telephony-cta-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.telephony-cta-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.tel-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.tel-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+}
+
+.tel-features-list li i {
+  color: var(--color-accent);
+}
+
 /* FAQ Accordion Section */
 .faq {
   background-color: var(--bg-white);
@@ -1358,6 +1517,7 @@ img {
   }
   .simulator-container,
   .security-grid,
+  .telephony-grid,
   .quick-contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1421,8 +1581,18 @@ img {
     border-bottom: 1px solid var(--border-light);
     padding-bottom: 20px;
   }
-  .sec-benefits {
+  .sec-benefits,
+  .telephony-benefits {
     grid-template-columns: 1fr;
+  }
+  .telephony-benefits {
+    gap: 16px;
+  }
+  .nav-portal-link {
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
   }
   .sim-options-grid {
     grid-template-columns: 1fr;
