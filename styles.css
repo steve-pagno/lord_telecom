@@ -14,10 +14,10 @@
   --color-primary-light: hsl(var(--primary-deep), var(--primary-hue), 15%);
   --color-primary-dark: hsl(var(--primary-deep), var(--primary-hue), 5%);
   
-  --accent-orange: 22;
-  --color-accent: hsl(var(--accent-orange), 100%, 50%); /* Electric Orange */
-  --color-accent-hover: hsl(var(--accent-orange), 100%, 43%);
-  --color-accent-light: hsla(var(--accent-orange), 100%, 50%, 0.15);
+  --accent-green: 120;
+  --color-accent: hsl(var(--accent-green), 100%, 46%); /* Neon Green */
+  --color-accent-hover: hsl(var(--accent-green), 100%, 38%);
+  --color-accent-light: hsla(var(--accent-green), 100%, 46%, 0.15);
   
   --accent-cyan: 190;
   --color-cyan: hsl(var(--accent-cyan), 95%, 45%); /* Electric Cyan */
@@ -38,7 +38,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 40px rgba(10, 20, 50, 0.15);
-  --shadow-glow: 0 0 25px hsla(var(--accent-orange), 100%, 50%, 0.4);
+  --shadow-glow: 0 0 25px hsla(var(--accent-green), 100%, 46%, 0.4);
   --shadow-glow-cyan: 0 0 25px hsla(var(--accent-cyan), 95%, 45%, 0.4);
 
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
