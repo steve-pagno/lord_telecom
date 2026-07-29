@@ -252,7 +252,7 @@ img {
 }
 
 .logo-img {
-  height: 48px;
+  height: 56px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -261,7 +261,7 @@ img {
 }
 
 .header.scrolled .logo-img {
-  height: 40px;
+  height: 46px;
 }
 
 .logo-icon {
